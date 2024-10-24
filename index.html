@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Image Gallery</h1>
+        <p id="instructions">Select a folder to view images.</p>
+        
+        <div class="button-group">
+            <button id="selectFolderButton">Select Folder</button>
+            <button id="processButton">Process Images</button>
+        </div>
+        
+        <div id="progressContainer" style="display:none;">
+            <progress id="progressBar" value="0" max="100"></progress>
+            <p id="progressText">Processing: 0%</p>
+        </div>
+        
+        <div id="searchContainer">
+            <input type="text" id="searchInput" placeholder="Search images...">
+            <button id="searchButton">Search</button>
+        </div>
+
+        <div id="imageGrid"></div>
+    </div>
+
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img id="previewImage" src="" alt="Preview">
+          <p id="previewCaption"></p>
+          <div class="button-group">
+            <button id="openInDefaultApp">Open in Default App</button>
+            <button id="editImage">Edit Image</button>
+            <button id="copyText">Copy text in this image</button>
+          </div>
+        </div>
+      </div>
+
+    <div id="searchModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Search Results</h2>
+            <div id="searchResults"></div>
+        </div>
+    </div>
+
+    <div id="imageOverlay">
+        <img id="overlayImage" src="" alt="Overlay">
+        <p id="overlayCaption"></p>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
